@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'controller/theme_controller.dart';
 import 'bindings/app_binding.dart';
+import 'services/locathion_service.dart';
 import 'theme/app_theme.dart';
 import 'routes.dart';
 
 void main() async {
+  await Get.putAsync(() => LocationService().init());//service for listen current location all time
   runApp(MosquesGuideApp());
 }
 
