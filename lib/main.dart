@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:mosques_guide_app/services/locathion_service.dart';
 import 'controller/theme_controller.dart';
 import 'bindings/app_binding.dart';
-import 'services/locathion_service.dart';
 import 'theme/app_theme.dart';
 import 'routes.dart';
 
 void main() async {
-  await Get.putAsync(() => LocationService().init());//service for listen current location all time
+  WidgetsFlutterBinding.ensureInitialized();
+  // Service for listen current location all time
+  await Get.putAsync(() => LocationService().init());
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: primaryColor));
   runApp(MosquesGuideApp());
 }
 
@@ -26,7 +30,7 @@ class MosquesGuideApp extends StatelessWidget {
       darkTheme: Themes.darkTheme,
       themeMode: themeController.theme,
       locale: Get.deviceLocale,
-      initialRoute: '/',
+      initialRoute: '/home',
       getPages: routes(),
     );
   }
