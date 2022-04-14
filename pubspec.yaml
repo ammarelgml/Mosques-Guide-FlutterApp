@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   get: ^4.6.1
+  get_storage: ^2.0.3
   location: ^4.3.0
   searchfield: ^0.6.2
   flutter_svg: ^1.0.3
