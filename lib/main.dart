@@ -17,6 +17,7 @@ class MosquesGuideApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      textDirection: TextDirection.rtl,
       debugShowCheckedModeBanner: false,
       title: 'Mosques Guide',
       initialBinding: AppBinding(),
@@ -24,7 +25,7 @@ class MosquesGuideApp extends StatelessWidget {
       darkTheme: Themes.darkTheme,
       themeMode: themeController.theme,
       locale: Get.deviceLocale,
-      initialRoute: '/',
+      initialRoute: '/homePage',
       getPages: routes(),
     );
   }
