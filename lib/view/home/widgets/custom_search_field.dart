@@ -7,12 +7,10 @@ class CustomSearchField extends StatelessWidget {
     Key? key,
     required this.controller,
     required this.list,
-    required this.onTap,
   }) : super(key: key);
 
   final TextEditingController controller;
   final List<String> list;
-  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +20,7 @@ class CustomSearchField extends StatelessWidget {
         return SearchFieldListItem(e, child: Text(e));
       }).toList(),
       searchInputDecoration: InputDecoration(
-        contentPadding: const EdgeInsets.all(14),
+        contentPadding: const EdgeInsets.all(defSpacing / 2),
         hintText: 'Search for a mosque',
         hintStyle: kTinyTextStyle,
         prefixIcon: Image.asset('assets/images/search.png'),
@@ -32,9 +30,6 @@ class CustomSearchField extends StatelessWidget {
       ),
       maxSuggestionsInViewPort: 4,
       itemHeight: 50,
-      onTap: (item) {
-        onTap(item);
-      },
       suggestionAction: SuggestionAction.next,
     );
   }

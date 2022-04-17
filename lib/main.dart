@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:mosques_guide_app/view/main/index.dart';
 import 'controller/theme_controller.dart';
 import 'bindings/app_binding.dart';
 import 'theme/app_theme.dart';
@@ -23,11 +24,10 @@ class MosquesGuideApp extends StatelessWidget {
   MosquesGuideApp({Key? key}) : super(key: key);
   final themeController = Get.put(ThemeController());
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      textDirection: TextDirection.rtl,
+      // textDirection: TextDirection.rtl,
       debugShowCheckedModeBanner: false,
       title: 'Mosques Guide',
       initialBinding: AppBinding(),
@@ -35,7 +35,7 @@ class MosquesGuideApp extends StatelessWidget {
       darkTheme: Themes.darkTheme,
       themeMode: themeController.theme,
       locale: Get.deviceLocale,
-      initialRoute: '/homePage',
+      initialRoute: '/${Main.id}',
       getPages: routes(),
     );
   }

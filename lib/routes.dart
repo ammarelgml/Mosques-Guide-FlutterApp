@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:mosques_guide_app/view/main/index.dart';
 import 'view/about_us/index.dart';
 import 'view/auth/index.dart';
 import 'view/contact_us/index.dart';
@@ -7,15 +8,14 @@ import 'view/profile/index.dart';
 import 'view/settings/index.dart';
 import 'view/welcome/index.dart';
 import 'view/directions/index.dart';
-import 'view/home/homePage.dart';
 import 'view/home/index.dart';
 import 'view/onboarding/index.dart';
 import 'view/splash/index.dart';
 
 // Routes Of the Mosque App
 routes() => [
-      GetPage(name: "/homePage", page: () => HomePage()),
       GetPage(name: "/", page: () => const Splash()),
+      GetPage(name: "/${Main.id}", page: () => Main()),
       GetPage(name: "/${Welcome.id}", page: () => const Welcome()),
       GetPage(name: "/${Auth.id}", page: () => const Auth()),
       GetPage(name: "/${OnBoarding.id}", page: () => const OnBoarding()),

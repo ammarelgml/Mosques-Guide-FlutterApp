@@ -16,5 +16,5 @@ class DrawerItems {
   static const contact = DrawerItem("تواصل معانا", FontAwesomeIcons.phone);
   static const about = DrawerItem("عن التطبيق", FontAwesomeIcons.info);
 
-  static final List<DrawerItem> all = [home, account, lang,shere, contact, about];
+  static final List<DrawerItem> all = [home, account, lang, shere, contact, about];
 }
