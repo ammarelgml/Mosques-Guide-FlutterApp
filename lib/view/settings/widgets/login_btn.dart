@@ -5,14 +5,17 @@ class LoginBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: login,
-      child: const Text(
-        "تسجيل الدخول",
-        style: TextStyle(
-            color: Color(0xff007E6A),
-            fontWeight: FontWeight.bold,
-            fontSize: 18),
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: TextButton(
+        onPressed: login,
+        child: const Text(
+          "تسجيل الدخول",
+          style: TextStyle(
+              color: Color(0xff007E6A),
+              fontWeight: FontWeight.bold,
+              fontSize: 18),
+        ),
       ),
     );
   }
