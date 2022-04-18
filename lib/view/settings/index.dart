@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mosques_guide_app/view/settings/widgets/button.dart';
 import 'package:mosques_guide_app/view/settings/widgets/header_section.dart';
+import 'package:mosques_guide_app/view/settings/widgets/login_btn.dart';
 
 class Settings extends StatelessWidget {
   const Settings({Key? key}) : super(key: key);
@@ -27,6 +28,7 @@ class Settings extends StatelessWidget {
               Button(onPressed: shareApp, title: "شارك التطبيق"),
               Button(onPressed: contactUs, title: "تواصل معنا"),
               Button(onPressed: aboutUs, title: "عن التطبيق"),
+              LoginBtn(),
             ],
           ),
         )
