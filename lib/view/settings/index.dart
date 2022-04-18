@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '/view/settings/widgets/button.dart';
 import '/view/settings/widgets/header_section.dart';
 import '/view/settings/widgets/login_btn.dart';
@@ -66,7 +67,7 @@ class Settings extends StatelessWidget {
   }
 
   aboutUs() {
-    print("About Us Btn");
+    Get.toNamed('/about_us');
   }
 
   accountSettings() {
