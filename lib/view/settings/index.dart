@@ -23,7 +23,10 @@ class Settings extends StatelessWidget {
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ),
-              Button(onPressed: onPressed, title: "اللغة"),
+              Button(onPressed: languageChange, title: "اللغة"),
+              Button(onPressed: shareApp, title: "شارك التطبيق"),
+              Button(onPressed: contactUs, title: "تواصل معنا"),
+              Button(onPressed: aboutUs, title: "عن التطبيق"),
             ],
           ),
         )
@@ -31,7 +34,19 @@ class Settings extends StatelessWidget {
     ));
   }
 
-  onPressed() {
-    print("ClickMe");
+  languageChange() {
+    print("Language Btn");
+  }
+
+  shareApp() {
+    print("Share App Btn");
+  }
+
+  contactUs() {
+    print("Contact Us Btn");
+  }
+
+  aboutUs() {
+    print("About Us Btn");
   }
 }
