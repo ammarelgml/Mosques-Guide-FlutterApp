@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mosques_guide_app/theme/styles.dart';
 import 'drawer_widget.dart';
 
-class MenuScreen extends StatelessWidget {
-  const MenuScreen({Key? key}) : super(key: key);
+class Menu extends StatelessWidget {
+  const Menu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

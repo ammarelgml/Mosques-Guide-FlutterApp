@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.0.3
+  http: ^0.13.4
   get: ^4.6.1
   get_storage: ^2.0.3
   flutter_native_splash: ^2.1.5
@@ -42,6 +43,7 @@ dependencies:
   flutter_zoom_drawer: ^3.0.1
   location: ^4.3.0
   searchfield: ^0.6.3
+  intl: ^0.17.0
 
 flutter_native_splash:
   background_image: assets\images\layerOne.png

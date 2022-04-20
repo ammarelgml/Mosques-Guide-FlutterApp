@@ -3,7 +3,8 @@ import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
 import 'package:mosques_guide_app/view/home/index.dart';
 import '../../controller/drawer_controller.dart';
-import 'widgets/menuScreen.dart';
+import '../../theme/styles.dart';
+import 'widgets/menu.dart';
 
 class Main extends StatelessWidget {
   Main({Key? key}) : super(key: key);
@@ -13,18 +14,13 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [
-        Color.fromRGBO(115, 162, 106, 1),
-        Color.fromRGBO(79, 140, 105, 1),
-        Color.fromRGBO(61, 128, 106, 1)
-      ])),
+      decoration: mainDecoration,
       child: Scaffold(
           backgroundColor: Colors.transparent,
           body: ZoomDrawer(
             // isRtl: true,
             controller: appDrawerController.drawerController,
-            menuScreen: const MenuScreen(),
+            menuScreen: const Menu(),
             mainScreen: const Home(),
             borderRadius: 24.0,
             showShadow: true,

@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:mosques_guide_app/view/main/index.dart';
+import 'bindings/prayer_times_binding.dart';
 import 'view/about_us/index.dart';
 import 'view/auth/index.dart';
 import 'view/contact_us/index.dart';
@@ -21,7 +22,11 @@ routes() => [
       GetPage(name: "/${OnBoarding.id}", page: () => const OnBoarding()),
       GetPage(name: "/${Home.id}", page: () => const Home()),
       GetPage(name: "/${Directions.id}", page: () => const Directions()),
-      GetPage(name: "/${PrayerTimings.id}", page: () => const PrayerTimings()),
+      GetPage(
+        name: "/${PrayerTimings.id}",
+        page: () => const PrayerTimings(),
+        binding: PrayerTimesBinding(),
+      ),
       GetPage(name: "/${Settings.id}", page: () => const Settings()),
       GetPage(name: "/${Profile.id}", page: () => const Profile()),
       GetPage(name: "/${AboutUs.id}", page: () => const AboutUs()),

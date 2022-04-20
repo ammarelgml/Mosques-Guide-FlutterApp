@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mosques_guide_app/view/prayer_timings/index.dart';
 import '../../../controller/drawer_controller.dart';
 import '../../../theme/styles.dart';
 import 'custom_search_field.dart';
@@ -32,13 +33,23 @@ class Header extends GetView<AppDrawerController> {
                     icon: const Icon(Icons.menu, color: Colors.white, size: 24)),
               ),
               Image.asset('assets/images/title_icon.png'),
-              const SizedBox(width: defSpacing * 2.5),
+              const SizedBox(width: defSpacing * 2.8),
             ],
           ),
-          const Text('Next prayer time', style: kSmallTextStyle),
-          const Text('05:15 AM', style: kTitleStyle),
-          const Text('Al-fajr prayer', style: kSmallTextStyle),
-          const SizedBox(height: defSpacing /2),
+          MaterialButton(
+            onPressed: (){
+              Get.toNamed(PrayerTimings.id);
+            },
+            child: Column(
+              children: const [
+                Text('Next prayer time', style: kSmallTextStyle),
+                // Todo: use real next time prayer
+                Text('05:15 AM', style: kTitleStyle),
+                Text('Al-fajr prayer', style: kSmallTextStyle),
+              ],
+            ),
+          ),
+          const SizedBox(height: defSpacing / 2),
           CustomSearchField(controller: searchController, list: fakeMosquesList),
         ],
       ),
