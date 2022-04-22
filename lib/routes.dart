@@ -7,6 +7,7 @@ import 'view/splash/index.dart';
 import 'view/settings/index.dart';
 import 'view/about_us/index.dart';
 import 'view/contact_us/index.dart';
+import 'view/settings/account_settings.dart';
 
 routes() => [
       GetPage(name: "/", page: () => Splash()),
@@ -16,4 +17,5 @@ routes() => [
       GetPage(name: "/settings", page: () => Settings()),
       GetPage(name: "/about_us", page: () => AboutUs()),
       GetPage(name: "/contact_us", page: () => ContactUs()),
+      GetPage(name: "/account_settings", page: () => AccountSettings()),
     ];
