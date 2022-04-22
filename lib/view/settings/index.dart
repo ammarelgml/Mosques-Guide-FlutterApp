@@ -63,7 +63,7 @@ class Settings extends StatelessWidget {
   }
 
   contactUs() {
-    print("Contact Us Btn");
+    Get.toNamed('/contact_us');
   }
 
   aboutUs() {
