@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 const defSpacing = 16.0;
+const kLight = Color(0xFFE8E8E8);
 const kLightGrey = Color(0xFF6C6C6C);
+const Color primaryColor = Color(0xFF007E6A);
+const Color gmailColor = Color(0xFFFF5741);
+const Color greyColor = Color(0xFF888888);
 
 const TextStyle kTitleStyle =
     TextStyle(color: Colors.white, fontSize: 28, fontFamily: 'Nunito', fontWeight: FontWeight.bold);

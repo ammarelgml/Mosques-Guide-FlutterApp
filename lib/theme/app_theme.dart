@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-Color primaryColor = const Color(0xFF007E6A);
+import 'package:mosques_guide_app/theme/styles.dart';
 
 Map<int, Color> _primaryColorMap = const {
   50: Color.fromRGBO(0, 126, 106, .1),
@@ -18,11 +17,8 @@ Map<int, Color> _primaryColorMap = const {
 final MaterialColor _primaryColorSwatch = MaterialColor(primaryColor.value, _primaryColorMap);
 
 class Themes {
-  static final lightTheme = ThemeData(
-    primaryColor: primaryColor,
-    primarySwatch: _primaryColorSwatch,
-    fontFamily: 'FFShamelFamily'
-  );
+  static final lightTheme =
+      ThemeData(primaryColor: primaryColor, primarySwatch: _primaryColorSwatch, fontFamily: 'FFShamelFamily');
 
   static final darkTheme = ThemeData();
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
 import 'package:mosques_guide_app/view/home/index.dart';
@@ -17,18 +18,21 @@ class Main extends StatelessWidget {
       decoration: mainDecoration,
       child: Scaffold(
           backgroundColor: Colors.transparent,
-          body: ZoomDrawer(
-            // isRtl: true,
-            controller: appDrawerController.drawerController,
-            menuScreen: const Menu(),
-            mainScreen: const Home(),
-            borderRadius: 24.0,
-            showShadow: true,
-            angle: 0.0,
-            androidCloseOnBackTap: true,
-            mainScreenTapClose: true,
-            drawerShadowsBackgroundColor: Colors.green,
-            slideWidth: MediaQuery.of(context).size.width * 0.6,
+          body: AnnotatedRegion<SystemUiOverlayStyle>(
+            value: SystemUiOverlayStyle.light,
+            child: ZoomDrawer(
+              // isRtl: true,
+              controller: appDrawerController.drawerController,
+              menuScreen: const Menu(),
+              mainScreen: const Home(),
+              borderRadius: 24.0,
+              showShadow: true,
+              angle: 0.0,
+              androidCloseOnBackTap: true,
+              mainScreenTapClose: true,
+              drawerShadowsBackgroundColor: Colors.green,
+              slideWidth: MediaQuery.of(context).size.width * 0.6,
+            ),
           )),
     );
   }

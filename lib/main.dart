@@ -9,6 +9,7 @@ import 'theme/app_theme.dart';
 import 'services/network/location_service.dart';
 import 'services/local/storage_service.dart';
 import 'routes.dart';
+import 'view/welcome/index.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,7 +36,7 @@ class MosquesGuideApp extends StatelessWidget {
       darkTheme: Themes.darkTheme,
       themeMode: themeController.theme,
       locale: Get.deviceLocale,
-      initialRoute: '/${Main.id}',
+      initialRoute: '/${Welcome.id}',
       getPages: routes(),
     );
   }

@@ -11,11 +11,9 @@ import 'view/welcome/index.dart';
 import 'view/directions/index.dart';
 import 'view/home/index.dart';
 import 'view/onboarding/index.dart';
-import 'view/splash/index.dart';
 
 // Routes Of the Mosque App
 routes() => [
-      GetPage(name: "/", page: () => const Splash()),
       GetPage(name: "/${Main.id}", page: () => Main()),
       GetPage(name: "/${Welcome.id}", page: () => const Welcome()),
       GetPage(name: "/${Auth.id}", page: () => const Auth()),
