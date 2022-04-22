@@ -75,6 +75,6 @@ class Settings extends StatelessWidget {
   }
 
   passwordSettings() {
-    print("password Settings Btn");
+    Get.toNamed('/password_settings');
   }
 }
