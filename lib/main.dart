@@ -7,6 +7,7 @@ import 'theme/app_theme.dart';
 import 'routes.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Get.putAsync(() => LocationService().init());//service for listen current location all time
   runApp(MosquesGuideApp());
 }
@@ -22,10 +23,12 @@ class MosquesGuideApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Mosques Guide',
       initialBinding: AppBinding(),
-      theme: Themes.lightTheme,
+      //theme: Themes.lightTheme,
+      theme: Themes.getLightTheme(),//you can change this themes
       darkTheme: Themes.darkTheme,
       themeMode: themeController.theme,
       locale: Get.deviceLocale,
+      // initialRoute: '/',
       initialRoute: '/',
       getPages: routes(),
     );

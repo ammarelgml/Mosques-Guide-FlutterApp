@@ -74,6 +74,10 @@ flutter:
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
+  fonts:
+    - family: Trajan Pro
+      fonts:
+        - asset: assets/font/hacen_tunisia.ttf
   # example:
   # fonts:
   #   - family: Schyler
