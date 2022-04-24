@@ -32,11 +32,12 @@ class MosquesGuideApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Mosques Guide',
       initialBinding: AppBinding(),
-      theme: Themes.lightTheme,
+      //theme: Themes.lightTheme,
+      theme: Themes.getLightTheme(),//you can change this themes
       darkTheme: Themes.darkTheme,
       themeMode: themeController.theme,
       locale: Get.deviceLocale,
-      initialRoute: '/${Welcome.id}',
+      initialRoute: '/',
       getPages: routes(),
     );
   }
