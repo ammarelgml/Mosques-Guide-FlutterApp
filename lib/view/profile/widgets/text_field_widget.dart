@@ -2,10 +2,8 @@
  * Copyright (c) 2020 .
  */
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../common/ui.dart';
 
 class TextFieldWidget extends StatelessWidget {

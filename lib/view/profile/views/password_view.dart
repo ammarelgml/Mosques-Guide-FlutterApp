@@ -1,16 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mosques_guide_app/routes.dart';
-
-// import '../../../models/media_model.dart';
-// import '../../global_widgets/image_field_widget.dart';
-// import '../../global_widgets/text_field_widget.dart';
-import '../controllers/profile_controller.dart';
-import '../widget/text_field_widget.dart';
+import '../controller.dart';
+import '../widgets/text_field_widget.dart';
 
 class PassWordView extends GetView<ProfileController> {
- @override
+  @override
   Widget build(BuildContext context) {
     //  final controller2 = Get.find<AuthController>();
     controller.profileForm = GlobalKey<FormState>();

@@ -150,7 +150,7 @@ abstract class Model {
           'Error while parsing ' + attribute + '[' + e.toString() + ']');
     }
   }
-  //
+
   // Media mediaFromJson(Map<String, dynamic> json, String attribute) {
   //   try {
   //     Media media = new Media();

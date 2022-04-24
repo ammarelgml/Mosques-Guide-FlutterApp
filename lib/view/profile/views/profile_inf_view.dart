@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-// import '../../../models/media_model.dart';
-// import '../../global_widgets/image_field_widget.dart';
-// import '../../global_widgets/text_field_widget.dart';
-import '../controllers/profile_controller.dart';
-import '../widget/text_field_widget.dart';
+import '../controller.dart';
+import '../widgets/text_field_widget.dart';
 
 class ProfileInfView extends GetView<ProfileController> {
+  const ProfileInfView({Key? key}) : super(key: key);
+
   // final bool hideAppBar;
   //
   // ProfileView({this.hideAppBar = false}) {

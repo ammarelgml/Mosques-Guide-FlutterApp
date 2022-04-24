@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../controller/drawer_controller.dart';
+import 'controller/drawer_controller.dart';
 
 // Services started before the app runs, such as Restful api.
 

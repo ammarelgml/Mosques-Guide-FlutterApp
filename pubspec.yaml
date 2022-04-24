@@ -93,9 +93,7 @@ flutter:
   fonts:
     - family: Trajan Pro
       fonts:
-        - asset: assets/font/hacen_tunisia.ttf
-  # example:
-  fonts:
+        - asset: assets/fonts/hacen_tunisia.ttf
     - family: FFShamelFamily
       fonts:
         - asset: assets/fonts/FFShamelFamily-SansOneBook.ttf
