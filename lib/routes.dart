@@ -9,18 +9,15 @@ import 'package:mosques_guide_app/view/main/index.dart';
 import 'view/prayer_timings/bindinds/prayer_times_binding.dart';
 import 'view/about_us/index.dart';
 import 'view/auth/index.dart';
-import 'view/contact_us/index.dart';
 import 'view/prayer_timings/index.dart';
-import 'view/profile/index.dart';
 import 'view/profile/views/profile_inf_view.dart';
-import 'view/settings/index.dart';
 import 'view/welcome/index.dart';
 
 // Routes Of the Mosque App
 routes() => [
-      GetPage(name: "/on_boarding", page: () => const OnBoarding()),
-      GetPage(name: "/home", page: () => const Home()),
-      GetPage(name: "/directions", page: () => const Directions()),
+      GetPage(name: Routes.ON_BOARDING, page: () => const OnBoarding()),
+      GetPage(name: Routes.FORGOT_PASSWORD, page: () => const Home()),
+      GetPage(name: Routes.DIRECTIONS, page: () => const Directions()),
       GetPage(
           name: Routes.FORGOT_PASSWORD,
           page: () => PassWordView(),
@@ -33,26 +30,29 @@ routes() => [
           name: Routes.PROFILE_INF,
           page: () => ProfileInfView(),
           binding: ProfileBinding()),
-      GetPage(name: "/${Main.id}", page: () => Main()),
-      GetPage(name: "/${Welcome.id}", page: () => const Welcome()),
-      GetPage(name: "/${Auth.id}", page: () => const Auth()),
-      GetPage(name: "/${OnBoarding.id}", page: () => const OnBoarding()),
-      GetPage(name: "/${Home.id}", page: () => const Home()),
-      GetPage(name: "/${Directions.id}", page: () => const Directions()),
+      GetPage(name: Routes.MAIN, page: () => Main()),
+      GetPage(name: Routes.WELCOME, page: () => Welcome()),
+      GetPage(name: Routes.AUTH, page: () => Auth()),
       GetPage(
-        name: "/${PrayerTimings.id}",
-        page: () => const PrayerTimings(),
-        binding: PrayerTimesBinding(),
-      ),
-      GetPage(name: "/${Settings.id}", page: () => const Settings()),
-      GetPage(name: "/${Profile.id}", page: () => const Profile()),
+          name: Routes.PRAYER_TIMINGS,
+          page: () => const PrayerTimings(),
+          binding: PrayerTimesBinding()),
       GetPage(name: "/${AboutUs.id}", page: () => const AboutUs()),
-      GetPage(name: "/${ContactUs.id}", page: () => const ContactUs()),
+      // GetPage(name: "/${Settings.id}", page: () => const Settings()),
+      // GetPage(name: "/${Profile.id}", page: () => const Profile()),
+      // GetPage(name: "/${ContactUs.id}", page: () => const ContactUs()),
     ];
 
 class Routes {
-  // ignore: constant_identifier_names
+  static const MAIN = '/main';
+  static const HOME = '/home';
+  static const DIRECTIONS = '/directions';
+  static const ON_BOARDING = '/on_boarding';
   static const FORGOT_PASSWORD = '/forgot_password';
   static const CONTACT_US = '/contact_us';
   static const PROFILE_INF = '/profile_inf';
+  static const WELCOME = '/welcome';
+  static const AUTH = '/auth';
+  static const PRAYER_TIMINGS = '/prayer_timings';
+  static const ABOUT_US = '/about_us';
 }

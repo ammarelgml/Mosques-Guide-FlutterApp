@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:mosques_guide_app/view/main/index.dart';
 import 'controller/theme_controller.dart';
 import 'app_binding.dart';
 import 'theme/app_theme.dart';
 import 'services/network/location_service.dart';
 import 'services/local/storage_service.dart';
 import 'routes.dart';
-import 'view/welcome/index.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +35,7 @@ class MosquesGuideApp extends StatelessWidget {
       darkTheme: Themes.darkTheme,
       themeMode: themeController.theme,
       locale: Get.deviceLocale,
-      initialRoute: '/',
+      initialRoute: Routes.MAIN,
       getPages: routes(),
     );
   }

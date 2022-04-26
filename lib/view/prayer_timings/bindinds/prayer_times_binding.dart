@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:mosques_guide_app/view/home/controller.dart';
+import '../controller.dart';
 
 class PrayerTimesBinding implements Bindings {
   @override

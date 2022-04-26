@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../theme/styles.dart';
-import '../home/controller.dart';
 import 'widgets/header.dart';
 import 'widgets/prayers_list.dart';
+import 'controller.dart';
 
 class PrayerTimings extends GetView<PrayerTimesController> {
-  static const String id = 'prayer_timings';
 
   const PrayerTimings({Key? key}) : super(key: key);
 

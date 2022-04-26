@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mosques_guide_app/view/prayer_timings/index.dart';
 import '../../../controller/drawer_controller.dart';
+import '../../../routes.dart';
 import '../../../theme/styles.dart';
 import 'custom_search_field.dart';
 
@@ -38,7 +38,7 @@ class Header extends GetView<AppDrawerController> {
           ),
           MaterialButton(
             onPressed: (){
-              Get.toNamed(PrayerTimings.id);
+              Get.toNamed(Routes.PRAYER_TIMINGS);
             },
             child: Column(
               children: const [
