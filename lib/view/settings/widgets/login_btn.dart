@@ -9,10 +9,12 @@ class LoginBtn extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: TextButton(
         onPressed: login,
+        // Change Button Text and Color if Logged In
         child: const Text(
-          "تسجيل الدخول",
+          "تسجيل الدخول", //isConnected ? "تسجيل الخروج" : "تسجيل الدخول",
           style: TextStyle(
-              color: Color(0xff007E6A),
+              color: Color(
+                  0xff007E6A), // isConnected ? Color(0xff007E6A) : Color(0xffD85454),
               fontWeight: FontWeight.bold,
               fontSize: 18),
         ),

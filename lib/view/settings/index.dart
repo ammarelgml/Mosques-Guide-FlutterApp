@@ -5,7 +5,12 @@ import '/view/settings/widgets/header_section.dart';
 import '/view/settings/widgets/login_btn.dart';
 
 class Settings extends StatelessWidget {
-  const Settings({Key? key}) : super(key: key);
+  // const Settings({Key? key}) : super(key: key);
+
+  final bool isConnected;
+  Settings({
+    this.isConnected = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,32 +24,48 @@ class Settings extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 22.0),
             child: SingleChildScrollView(
                 child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
               children: <Widget>[
-                const Text(
-                  "معلومات الحساب",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xff2D3437),
+                // If User is Connected to the app
+                if (isConnected) ...[
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      const Text(
+                        "معلومات الحساب",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xff2D3437),
+                        ),
+                        textDirection: TextDirection.rtl,
+                      ),
+                      Button(onPressed: accountSettings, title: "تعديل الحساب"),
+                      Button(
+                          onPressed: passwordSettings,
+                          title: "تعديل كلمة المرور"),
+                    ],
                   ),
-                  textDirection: TextDirection.rtl,
-                ),
-                Button(onPressed: accountSettings, title: "تعديل الحساب"),
-                Button(onPressed: passwordSettings, title: "تعديل كلمة المرور"),
-                const Text(
-                  "معلومات التطبيق",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xff2D3437),
+                  // If User is Not Connected to the app
+                ] else ...[
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      const Text(
+                        "معلومات التطبيق",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xff2D3437),
+                        ),
+                        textDirection: TextDirection.rtl,
+                      ),
+                      Button(onPressed: languageChange, title: "اللغة"),
+                      Button(onPressed: shareApp, title: "شارك التطبيق"),
+                      Button(onPressed: contactUs, title: "تواصل معنا"),
+                      Button(onPressed: aboutUs, title: "عن التطبيق"),
+                    ],
                   ),
-                  textDirection: TextDirection.rtl,
-                ),
-                Button(onPressed: languageChange, title: "اللغة"),
-                Button(onPressed: shareApp, title: "شارك التطبيق"),
-                Button(onPressed: contactUs, title: "تواصل معنا"),
-                Button(onPressed: aboutUs, title: "عن التطبيق"),
+                ],
                 const Center(child: LoginBtn()),
               ],
             )),

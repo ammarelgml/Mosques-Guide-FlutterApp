@@ -74,8 +74,9 @@ class _SettingsHeaderState extends State<SettingsHeader> {
           "مرحبا بك",
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
         ),
+        // Change to the name of User if connected
         const Text(
-          "زائر",
+          "زائر", //isConnected ?  "زائر" : connectedUser,
           style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
         )
       ],
