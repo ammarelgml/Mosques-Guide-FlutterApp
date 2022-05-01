@@ -2,6 +2,13 @@ import 'package:get/get.dart';
 import 'view/directions/index.dart';
 import 'view/home/index.dart';
 import 'view/onboarding/index.dart';
+import 'view/splash/index.dart';
+import 'view/settings/index.dart';
+import 'view/about_us/index.dart';
+import 'view/contact_us/index.dart';
+import 'view/settings/account_settings.dart';
+import 'view/settings/password_settings.dart';
+
 import 'view/profile/bindings/profile_binding.dart';
 import 'view/profile/views/contact_us_view.dart';
 import 'view/profile/views/password_view.dart';
@@ -15,7 +22,17 @@ import 'view/welcome/index.dart';
 
 // Routes Of the Mosque App
 routes() => [
-      GetPage(name: Routes.ON_BOARDING, page: () => const OnBoarding()),
+      GetPage(name: "/", page: () => Splash()),
+      GetPage(name: "/on_boarding", page: () => OnBoarding()),
+      GetPage(name: "/home", page: () => Home()),
+      GetPage(name: "/directions", page: () => Directions()),
+      GetPage(name: "/settings", page: () => Settings()),
+      GetPage(name: "/about_us", page: () => AboutUs()),
+      GetPage(name: "/contact_us", page: () => ContactUs()),
+      GetPage(name: "/account_settings", page: () => AccountSettings()),
+      GetPage(name: "/password_settings", page: () => PasswordSettings()),
+
+  GetPage(name: Routes.ON_BOARDING, page: () => const OnBoarding()),
       GetPage(name: Routes.FORGOT_PASSWORD, page: () => const Home()),
       GetPage(name: Routes.DIRECTIONS, page: () => const Directions()),
       GetPage(
