@@ -9,6 +9,7 @@ class Settings extends StatefulWidget {
   final bool isConnected;
   Settings({this.isConnected = false});
 
+
   @override
   State<Settings> createState() => _SettingsState();
 }
